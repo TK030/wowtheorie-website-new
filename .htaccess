@@ -24,6 +24,25 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
 # --------------------------
 
+# Canonical: verwijder extensies (.php / .html)
+# - Redirect requests that include .php or .html to extensionless URL
+# - Internally rewrite extensionless URL to the real file if it exists
+# --------------------------
+# 1) Redirect explicit .php/.html requests to extensionless (canonical)
+RewriteCond %{THE_REQUEST} \s/([^\s\?]+?)\.(php|html) [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# 2) Internally serve .php if exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# 3) Internally serve .html if exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
 
 # --------------------------
 # Custom error pages - gebruik root 404/500 pagina's
