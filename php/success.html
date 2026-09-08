@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bericht verzonden - TK Webstudio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            /* Use site-wide variables from /css/style.css */
+            --success-bg: linear-gradient(180deg, rgba(30, 58, 138, 0.03), rgba(30, 58, 138, 0.00));
+            --accent-color: var(--color-orange);
+            --primary-dark: var(--color-primary-dark);
+            --text-muted: var(--color-grey);
+            --text-color: var(--color-dark);
+            --card-bg: var(--color-white);
+            --white: var(--color-white);
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: inherit;
+            background: var(--success-bg);
+        }
+
+        .success-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 28px 18px;
+        }
+
+        .success-box {
+            width: 100%;
+            max-width: 680px;
+            background: var(--card-bg, #ffffff);
+            padding: 34px 36px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.06);
+            border: 1px solid rgba(13, 27, 42, 0.04);
+        }
+
+        .logo {
+            max-width: 90px;
+            margin: 0 auto 18px;
+            display: block;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .success-icon {
+            width: 78px;
+            height: 78px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            background: var(--accent-color);
+            color: var(--white, #fff);
+            font-size: 34px;
+            box-shadow: 0 6px 18px rgba(13, 27, 42, 0.08);
+        }
+
+        .success-box h1 {
+            color: var(--primary-dark, #0D1B2A);
+            margin: 12px 0 8px;
+            font-size: 1.6rem;
+        }
+
+        .success-box p {
+            color: var(--text-muted, #6b7280);
+            margin: 0 0 18px;
+            line-height: 1.6;
+        }
+
+        .countdown {
+            font-weight: 700;
+            color: var(--text-color, #0d1b2a);
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: transparent;
+            color: var(--accent-color, #ff6b35);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .btn:focus {
+            outline: 2px solid rgba(249, 115, 22, 0.12);
+            outline-offset: 4px
+        }
+
+        @media (max-width:640px) {
+            .success-box {
+                padding: 24px
+            }
+
+            .success-icon {
+                width: 64px;
+                height: 64px;
+                font-size: 28px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-page">
+        <div class="success-box">
+            <a href="/" class="logo"><img src="/img/logo.png" alt="WowTheorie.nl"></a>
+            <div class="success-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></div>
+            <h1>Bedankt - je bericht is ontvangen</h1>
+            <p>Fijn dat je contact hebt opgenomen. Ik bekijk je bericht en reageer zo snel mogelijk.</p>
+            <div class="countdown">Je wordt over <span id="counter">5</span> seconden teruggestuurd naar de startpagina.
+            </div>
+            <a id="homeLink" href="/" class="btn" aria-label="Terug naar home">Terug naar home</a>
+            <noscript>
+                <p style="margin-top:12px;color:var(--text-muted,#6b7280)">JavaScript staat uit - klik op de knop om
+                    terug te gaan.</p>
+            </noscript>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var sec = 5;
+            var el = document.getElementById('counter');
+            var interval = setInterval(function () {
+                sec--;
+                if (el) el.textContent = sec;
+                if (sec <= 0) { clearInterval(interval); window.location.href = document.getElementById('homeLink').href; }
+            }, 1000);
+            // Safety: also set meta refresh fallback
+            var meta = document.createElement('meta'); meta.httpEquiv = 'refresh'; meta.content = '5;url=/'; document.getElementsByTagName('head')[0].appendChild(meta);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /php/
+Disallow: /vendor/
+Disallow: /node_modules/
+Allow: /
+
+Sitemap: https://wowtheorie.nl/sitemap.xml
+Host: https://wowtheorie.nl

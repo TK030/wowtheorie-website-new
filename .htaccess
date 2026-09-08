@@ -1,0 +1,133 @@
+# .htaccess - WOW Theorie (aanpassen waar nodig)
+# Maak altijd een backup van je oude .htaccess voordat je dit uploadt.
+
+# --- Basis instellingen ---
+Options -MultiViews
+DirectoryIndex index.html index.php
+
+RewriteEngine On
+RewriteBase /
+
+# --------------------------
+# Forceer HTTPS (permanent)
+# --------------------------
+# Zet deze aan als je site HTTPS ondersteunt (aanbevolen)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --------------------------
+# (Optioneel) Forceer non-www
+# --------------------------
+# Als je liever www wilt forceren, verwissel de regels hieronder.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# --------------------------
+
+
+# --------------------------
+# Custom error pages - gebruik root 404/500 pagina's
+# --------------------------
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# --------------------------
+# Security: blokkeer gevoelige bestanden en mappen
+# --------------------------
+<FilesMatch "^(\.env|composer\.(json|lock)|README\.md|\.gitignore)$">
+  Require all denied
+</FilesMatch>
+
+# Block access to dotfiles and .git folder
+RedirectMatch 404 /\.git
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+# Blokkeer toegang tot vendor composer composer files via oude style
+<FilesMatch "^(composer\.(json|lock)|README\.md)$">
+  Require all denied
+</FilesMatch>
+
+# --------------------------
+# Prevent directory listing
+# --------------------------
+Options -Indexes
+
+# --------------------------
+# Caching & Expires headers voor statische assets
+# --------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType application/font-woff2 "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|jpg|jpeg|png|gif|svg|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# --------------------------
+# GZIP / compressie (mod_deflate)
+# --------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json application/xml
+  # Zorg dat fonts ook gecomprimeerd kunnen worden
+  AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+</IfModule>
+
+# --------------------------
+# Security headers (voeg toe/aanpassen naar behoefte)
+# --------------------------
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "no-referrer-when-downgrade"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # Permission-Policy / Feature-Policy voorbeeld
+  Header always set Permissions-Policy "geolocation=(), microphone=()"
+  # Content-Security-Policy: vereist zorgvuldige configuratie! hieronder slechts voorbeeld
+  # Header always set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+</IfModule>
+
+# --------------------------
+# Hotlink protection (optioneel)
+# --------------------------
+# Uncomment en verander example.nl naar jouw domein als je hotlinking wilt voorkomen
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^https?://(www\.)?wowtheorie\.nl [NC]
+# RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC]
+
+# --------------------------
+# Prevent some common attacks (simple rules)
+# --------------------------
+# Block common malicious query strings
+<IfModule mod_rewrite.c>
+  RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+  RewriteCond %{QUERY_STRING} (\.\./|\.\.\\) [NC,OR]
+  RewriteCond %{QUERY_STRING} (base64_encode|GLOBALS|_REQUEST|phpinfo) [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# --------------------------
+# Optional: PHP settings (Sommige hosts geven 500 als ze niet zijn toegestaan)
+# --------------------------
+# Indien je server mod_php gebruikt kun je deze gebruiken, anders laat uitcommentaar
+# php_value upload_max_filesize 20M
+# php_value post_max_size 25M
+# php_value max_execution_time 60
+
+# --------------------------
+# End of file
+# --------------------------

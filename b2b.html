@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>B2B Samenwerking - WowTheorie.nl</title>
+    <meta name="description"
+        content="Rijscholen, theoriecentra en bedrijven die samenwerken met WowTheorie. Maatwerk theorietrainingen, vaste accountmanager en voordelige partnertarieven.">
+    <meta name="theme-color" content="#FF7A00">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/modal.css">
+</head>
+
+<body class="page-b2b">
+
+    <!-- ── HEADER ── -->
+            <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index" class="header__logo">
+                <img src="img/logo.png" alt="WowTheorie.nl" class="logo__img">
+            </a>
+
+            <nav class="header__nav" id="mainNav">
+                <ul class="nav__list">
+                    <li><a href="index" class="nav__link">Home</a></li>
+                    <li><a href="over-ons" class="nav__link">Over Ons</a></li>
+                    <li class="nav__dropdown">
+                        <a href="theorie-examens" class="nav__link">Theorie-examens <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="nav__dropdown-menu">
+                            <li><a href="auto-theorie"><i class="fa-solid fa-car"></i> Auto Theorie</a></li>
+                            <li><a href="motor-theorie"><i class="fa-solid fa-motorcycle"></i> Motor Theorie</a></li>
+                            <li><a href="scooter-theorie"><i class="fa-solid fa-bolt"></i> Scooter Theorie</a></li>
+                            <li><a href="vrachtwagen-theorie"><i class="fa-solid fa-truck"></i> Vrachtwagen Theorie</a></li>
+                            <li><a href="bus-theorie"><i class="fa-solid fa-bus"></i> Bus Theorie</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="diensten" class="nav__link">Diensten</a></li>
+                    <li><a href="b2b" class="nav__link nav__link--active">B2B</a></li>
+                    <li><a href="contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__tools">
+                <div class="language-picker">
+                    <button class="language-picker__toggle" type="button" aria-expanded="false">
+                        <span class="language-picker__flag"><img src="img/NL-icon.png" alt="Nederlandse vlag"></span>
+                        <span>NL</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul class="language-picker__menu">
+                        <li><a href="en/b2b.html" class="language-picker__option language-picker__option--active"><span
+                                    class="language-picker__flag"><img src="img/GB-icon.png" alt="Engelse vlag"></span>
+                                <span>EN</span></a></li>
+                        <li><a href="b2b.html" class="language-picker__option"><span class="language-picker__flag"><img src="img/NL-icon.png"
+                                        alt="Nederlandse vlag"></span>
+                                <span>NL</span></a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn--orange header__cta js-aanmeld-btn"><i class="fa-solid fa-graduation-cap" style="margin-right:6px;"></i>Aanmelden</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu openen">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu__list">
+                <li><a href="index" class="mobile-menu__link mobile-menu__link--active">Home</a></li>
+                <li><a href="over-ons" class="mobile-menu__link">Over Ons</a></li>
+                <li class="mobile-menu__dropdown">
+                    <button class="mobile-menu__dropdown-toggle" aria-expanded="false">Theorie-examens <i class="fa-solid fa-chevron-down"></i></button>
+                    <ul class="mobile-menu__dropdown-list">
+                        <li><a href="auto-theorie" class="mobile-menu__link"><i class="fa-solid fa-car"></i> Auto Theorie</a></li>
+                        <li><a href="motor-theorie" class="mobile-menu__link"><i class="fa-solid fa-motorcycle"></i> Motor Theorie</a></li>
+                        <li><a href="scooter-theorie" class="mobile-menu__link"><i class="fa-solid fa-bolt"></i> Scooter Theorie</a></li>
+                        <li><a href="vrachtwagen-theorie" class="mobile-menu__link"><i class="fa-solid fa-truck"></i> Vrachtwagen Theorie</a></li>
+                        <li><a href="bus-theorie" class="mobile-menu__link"><i class="fa-solid fa-bus"></i> Bus Theorie</a></li>
+                    </ul>
+                </li>
+                <li><a href="diensten" class="mobile-menu__link">Diensten</a></li>
+                <li><a href="b2b" class="mobile-menu__link">B2B</a></li>
+                <li><a href="contact" class="mobile-menu__link">Contact</a></li>
+                <li><a href="#" class="btn btn--orange mobile-menu__cta js-aanmeld-btn"><i class="fa-solid fa-graduation-cap" style="margin-right:6px;"></i>Aanmelden</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <!-- Left -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <span class="hero__eyebrow"><i class="fa-solid fa-handshake"></i> B2B Samenwerking</span>
+                    <h1 class="hero__title">De theorietraining,<br><em>volledig geregeld</em><br>voor uw organisatie
+                    </h1>
+                    <p class="hero__lead">WowTheorie werkt samen met rijscholen, theoriecentra, bedrijven en
+                        opleidingsinstituten. Wij nemen de volledige theorietraining uit handen - van planning tot
+                        examen - zodat u zich kunt richten op uw eigen werk.</p>
+                    <div class="hero__actions">
+                        <a href="contact" class="btn btn-orange btn-lg"><i class="fa-solid fa-envelope"></i> Offerte
+                            aanvragen</a>
+                        <a href="#hoe-het-werkt" class="btn btn-outline-primary btn-lg">Hoe het werkt</a>
+                    </div>
+                </div>
+
+                <!-- Right: partner pills -->
+                <div class="hero__side" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+                    <p class="hero__side-label">Onze samenwerkingspartners</p>
+
+                    <a href="#partners" class="partner-pill">
+                        <div class="partner-pill__icon accent-blue"><i class="fa-solid fa-school"></i></div>
+                        <div>
+                            <p class="partner-pill__name">Theoriecentrum Amersfoort</p>
+                            <p class="partner-pill__type">Theoriecentrum</p>
+                        </div>
+                        <span class="partner-pill__badge tag accent-blue">Amersfoort</span>
+                    </a>
+
+                    <a href="#partners" class="partner-pill">
+                        <div class="partner-pill__icon accent-orange"><i class="fa-solid fa-car-side"></i></div>
+                        <div>
+                            <p class="partner-pill__name">Lescar</p>
+                            <p class="partner-pill__type">Rijschool</p>
+                        </div>
+                        <span class="partner-pill__badge tag accent-orange">Rijschool</span>
+                    </a>
+
+                    <a href="#partners" class="partner-pill">
+                        <div class="partner-pill__icon accent-green"><i class="fa-solid fa-steering-wheel"></i></div>
+                        <div>
+                            <p class="partner-pill__name">Rijschool Paraat</p>
+                            <p class="partner-pill__type">Rijschool</p>
+                        </div>
+                        <span class="partner-pill__badge tag accent-green">Rijschool</span>
+                    </a>
+
+                    <a href="#partners" class="partner-pill">
+                        <div class="partner-pill__icon accent-purple"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div>
+                            <p class="partner-pill__name">Rijschool Horizon</p>
+                            <p class="partner-pill__type">Rijschool</p>
+                        </div>
+                        <span class="partner-pill__badge tag accent-purple">Rijschool</span>
+                    </a>
+
+                    <a href="#partners" class="partner-pill">
+                        <div class="partner-pill__icon accent-amber"><i class="fa-solid fa-road"></i></div>
+                        <div>
+                            <p class="partner-pill__name">DriveX Rijopleidingen</p>
+                            <p class="partner-pill__type">Opleiding</p>
+                        </div>
+                        <span class="partner-pill__badge tag accent-amber">Opleiding</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="strip">
+        <div class="strip__track">
+            <!-- set 1 -->
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Bewezen leermethode</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> 85% slaagt in één keer</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Alle rijbewijscategorieën</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Vaste accountmanager</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Gecentraliseerde facturatie</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Herkansingsgarantie</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> 10.000+ geslaagde cursisten</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Heel Nederland</span>
+            <!-- set 2 (duplicate for seamless loop) -->
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Bewezen leermethode</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> 85% slaagt in één keer</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Alle rijbewijscategorieën</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Vaste accountmanager</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Gecentraliseerde facturatie</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Herkansingsgarantie</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> 10.000+ geslaagde cursisten</span>
+            <span class="strip__item"><i class="fa-solid fa-check"></i> Heel Nederland</span>
+        </div>
+    </div>
+
+    <!-- ── STAT RIBBON ── -->
+    <div class="stat-ribbon">
+        <div class="stat-ribbon__cell"><span class="stat-ribbon__num">10.000+</span><span
+                class="stat-ribbon__label">Geslaagde cursisten</span></div>
+        <div class="stat-ribbon__cell"><span class="stat-ribbon__num">85%</span><span class="stat-ribbon__label">Slaagt
+                in één keer</span></div>
+        <div class="stat-ribbon__cell"><span class="stat-ribbon__num">50+</span><span class="stat-ribbon__label">Actieve
+                B2B-partners</span></div>
+        <div class="stat-ribbon__cell"><span class="stat-ribbon__num">4,8/5</span><span
+                class="stat-ribbon__label">Gemiddelde beoordeling</span></div>
+    </div>
+
+    <!-- ── VOOR WIE ── -->
+    <section class="section section--white">
+        <div class="container">
+            <span class="eyebrow">Voor wie is dit?</span>
+            <h2 class="section-title">Wij werken samen met</h2>
+            <p class="section-lead">Of u een rijschool bent, een bedrijf dat rijbewijzen voor medewerkers regelt of een
+                opleidingsinstituut - WowTheorie heeft een passend partneraanbod.</p>
+
+            <div class="target-grid">
+                <div class="target-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="target-item__icon" style="background:#dbeafe;color:#1d4ed8;"><i
+                            class="fa-solid fa-car-side"></i></div>
+                    <div>
+                        <p class="target-item__title">Rijscholen</p>
+                        <p class="target-item__desc">Stuur uw leerlingen naar WowTheorie voor de theorie, terwijl u zich
+                            focust op de praktijklessen.</p>
+                    </div>
+                </div>
+                <div class="target-item" data-aos="fade-up" data-aos-delay="60">
+                    <div class="target-item__icon" style="background:#ffedd5;color:#ea580c;"><i
+                            class="fa-solid fa-school"></i></div>
+                    <div>
+                        <p class="target-item__title">Theoriecentra</p>
+                        <p class="target-item__desc">Versterk uw aanbod met onze bewezen leermethode en
+                            examenbegeleiding.</p>
+                    </div>
+                </div>
+                <div class="target-item" data-aos="fade-up" data-aos-delay="120">
+                    <div class="target-item__icon" style="background:#dcfce7;color:#16a34a;"><i
+                            class="fa-solid fa-building"></i></div>
+                    <div>
+                        <p class="target-item__title">Werkgevers</p>
+                        <p class="target-item__desc">Medewerkers die een rijbewijs (B, C, D of E) nodig hebben? Wij
+                            regelen het traject.</p>
+                    </div>
+                </div>
+                <div class="target-item" data-aos="fade-up" data-aos-delay="180">
+                    <div class="target-item__icon" style="background:#ede9fe;color:#7c3aed;"><i
+                            class="fa-solid fa-truck-moving"></i></div>
+                    <div>
+                        <p class="target-item__title">Transport & Logistiek</p>
+                        <p class="target-item__desc">Gespecialiseerde theorietraining voor vrachtwagen- en buschauffeurs
+                            (C, CE, D, DE).</p>
+                    </div>
+                </div>
+                <div class="target-item" data-aos="fade-up" data-aos-delay="240">
+                    <div class="target-item__icon" style="background:#fef3c7;color:#d97706;"><i
+                            class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <p class="target-item__title">ROC's & MBO-scholen</p>
+                        <p class="target-item__desc">Integreer ons theorieaanbod in uw opleiding met groepskortingen.
+                        </p>
+                    </div>
+                </div>
+                <div class="target-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="target-item__icon" style="background:#ccfbf1;color:#0d9488;"><i
+                            class="fa-solid fa-users"></i></div>
+                    <div>
+                        <p class="target-item__title">Re-integratiebureaus</p>
+                        <p class="target-item__desc">Flexibele trajecten waarbij een rijbewijs bijdraagt aan
+                            re-integratie naar werk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── SPLIT: WAT U KRIJGT (blue visual) ── -->
+    <section class="section section--grey">
+        <div class="container">
+            <div class="split">
+                <!-- Text -->
+                <div data-aos="fade-right" data-aos-duration="700">
+                    <span class="eyebrow">Partnervoordelen</span>
+                    <h2 class="section-title">Wat u als partner krijgt</h2>
+                    <p class="section-lead">Een B2B-samenwerking met WowTheorie betekent meer dan alleen cursisten
+                        aanmelden. Wij ontzorgen u volledig - van planning tot rapportage.</p>
+                    <div class="benefit-cards">
+                        <div class="benefit-card" data-aos="fade-right" data-aos-delay="0">
+                            <div class="benefit-card__icon" style="background:#ffedd5;color:#ea580c;"><i
+                                    class="fa-solid fa-tag"></i></div>
+                            <div>
+                                <p class="benefit-card__title">Voordelige partnertarieven</p>
+                                <p class="benefit-card__desc">Volumekorting op basis van het aantal cursisten dat u per
+                                    periode aanmeldt - hoe meer, hoe gunstiger.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card" data-aos="fade-right" data-aos-delay="60">
+                            <div class="benefit-card__icon" style="background:#dbeafe;color:#1d4ed8;"><i
+                                    class="fa-solid fa-user-tie"></i></div>
+                            <div>
+                                <p class="benefit-card__title">Vaste accountmanager</p>
+                                <p class="benefit-card__desc">Eén vast aanspreekpunt voor alle planningsvragen,
+                                    aanmeldingen en lopende zaken - altijd bereikbaar.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card" data-aos="fade-right" data-aos-delay="120">
+                            <div class="benefit-card__icon" style="background:#dcfce7;color:#16a34a;"><i
+                                    class="fa-solid fa-calendar-check"></i></div>
+                            <div>
+                                <p class="benefit-card__title">Prioriteit bij inschrijving</p>
+                                <p class="benefit-card__desc">Uw cursisten gaan voor. Geen wachttijden, geen gedoe -
+                                    gewoon snel ingepland op de datum die u kiest.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card" data-aos="fade-right" data-aos-delay="180">
+                            <div class="benefit-card__icon" style="background:#ede9fe;color:#7c3aed;"><i
+                                    class="fa-solid fa-rotate"></i></div>
+                            <div>
+                                <p class="benefit-card__title">Herkansingsgarantie</p>
+                                <p class="benefit-card__desc">Zakt een cursist? Geen extra kosten. Wij regelen kosteloos
+                                    een nieuwe kans tot ze slagen.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card" data-aos="fade-right" data-aos-delay="240">
+                            <div class="benefit-card__icon" style="background:#fef3c7;color:#d97706;"><i
+                                    class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <div>
+                                <p class="benefit-card__title">Gecentraliseerde facturatie</p>
+                                <p class="benefit-card__desc">Geen losse facturen per cursist - alles gebundeld op
+                                    organisatieniveau met heldere maandoverzichten.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card" data-aos="fade-right" data-aos-delay="300">
+                            <div class="benefit-card__icon" style="background:#ccfbf1;color:#0d9488;"><i
+                                    class="fa-solid fa-chart-line"></i></div>
+                            <div>
+                                <p class="benefit-card__title">Slagingsrapportages</p>
+                                <p class="benefit-card__desc">Periodiek overzicht van slagingsresultaten per groep of
+                                    deelnemer - zodat u altijd weet hoe het gaat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visual -->
+                <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+                    <div class="visual-block visual-block--blue">
+                        <p class="visual-block__eyebrow">Partnervoordelen op een rij</p>
+                        <div class="info-rows">
+                            <div class="info-row">
+                                <div class="info-row__icon"><i class="fa-solid fa-tag"></i></div>
+                                <span class="info-row__text">Volumekorting vanaf 5 cursisten per maand</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-row__icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <span class="info-row__text">Vaste accountmanager - altijd bereikbaar</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-row__icon"><i class="fa-solid fa-calendar-check"></i></div>
+                                <span class="info-row__text">Flexibele planning - ook op maat</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-row__icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <span class="info-row__text">Rapportage over slagingsresultaten</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-row__icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                                <span class="info-row__text">Gecentraliseerde facturatie per organisatie</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-row__icon"><i class="fa-solid fa-rotate"></i></div>
+                                <span class="info-row__text">Gratis herkansing bij zakken</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HOE HET WERKT ── -->
+    <section class="section section--white" id="hoe-het-werkt">
+        <div class="container">
+            <span class="eyebrow">Hoe het werkt</span>
+            <h2 class="section-title">Partner worden in 4 stappen</h2>
+            <p class="section-lead">Van eerste contact tot uw eerste geslaagde cursisten - wij begeleiden u stap voor
+                stap.</p>
+
+            <div class="process">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="process-step__num process-step__num--active">1</div>
+                    <h3 class="process-step__title">Vrijblijvend gesprek</h3>
+                    <p class="process-step__desc">We plannen een kennismakingsgesprek om uw wensen en volume in kaart te
+                        brengen. Telefonisch of op locatie.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-step__num">2</div>
+                    <h3 class="process-step__title">Maatwerk offerte</h3>
+                    <p class="process-step__desc">Op basis van uw situatie ontvangt u binnen één werkdag een
+                        transparante offerte met partnertarieven.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step__num">3</div>
+                    <h3 class="process-step__title">Overeenkomst</h3>
+                    <p class="process-step__desc">Na akkoord tekent u een samenwerkingsovereenkomst en krijgt u direct
+                        toegang tot uw accountmanager.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-step__num">4</div>
+                    <h3 class="process-step__title">Cursisten aanmelden</h3>
+                    <p class="process-step__desc">U meldt cursisten aan. Wij regelen planning, CBR-examen en
+                        begeleiding. U ontvangt de resultaten.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box highlight-box--spaced">
+                <p class="highlight-box__title"><i class="fa-solid fa-clock"></i> Reactietijd</p>
+                <p class="highlight-box__copy">Na uw aanvraag via de <a href="contact"
+                        class="highlight-box__link">contactpagina</a> reageren wij binnen <strong>één
+                        werkdag</strong> met een voorstel op maat. Geen verplichtingen - u beslist zelf of en wanneer u
+                    start.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── PARTNERS DETAIL ── -->
+    <section class="section section--grey" id="partners">
+        <div class="container">
+            <span class="eyebrow">Onze samenwerkingen</span>
+            <h2 class="section-title">Vertrouwd door rijscholen en organisaties door heel Nederland</h2>
+            <p class="section-lead">Meer dan 50 partners gingen u voor. Bekijk een selectie van onze vaste
+                samenwerkingspartners.</p>
+
+            <div class="partner-list">
+                <!-- Theoriecentrum Amersfoort -->
+                <div class="partner-card">
+                    <div class="partner-card__icon accent-blue">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="partner-card__content">
+                        <p class="partner-card__title">Theoriecentrum Amersfoort</p>
+                        <p class="partner-card__meta"><i class="fa-solid fa-location-dot"></i>Amersfoort &nbsp;·&nbsp;
+                            Theoriecentrum</p>
+                    </div>
+                    <span class="tag accent-blue partner-card__tag" id="tag1">Vaste
+                        partner</span>
+                </div>
+                <!-- Lescar -->
+                <div class="partner-card">
+                    <div class="partner-card__icon accent-orange">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <div class="partner-card__content">
+                        <p class="partner-card__title">Lescar</p>
+                        <p class="partner-card__meta"><i class="fa-solid fa-location-dot"></i>Nederland &nbsp;·&nbsp;
+                            Rijschool</p>
+                    </div>
+                </div>
+                <!-- Rijschool Paraat -->
+                <div class="partner-card">
+                    <div class="partner-card__icon accent-green">
+                        <i class="fa-solid fa-steering-wheel"></i>
+                    </div>
+                    <div class="partner-card__content">
+                        <p class="partner-card__title">Rijschool Paraat</p>
+                        <p class="partner-card__meta"><i class="fa-solid fa-location-dot"></i>Nederland &nbsp;·&nbsp;
+                            Rijschool</p>
+                    </div>
+                </div>
+                <!-- Rijschool Horizon (placeholder) -->
+                <div class="partner-card">
+                    <div class="partner-card__icon accent-purple">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="partner-card__content">
+                        <p class="partner-card__title">Rijschool Horizon</p>
+                        <p class="partner-card__meta"><i class="fa-solid fa-location-dot"></i>Nederland &nbsp;·&nbsp;
+                            Rijschool</p>
+                    </div>
+                </div>
+                <!-- DriveX (placeholder) -->
+                <div class="partner-card">
+                    <div class="partner-card__icon accent-amber">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <div class="partner-card__content">
+                        <p class="partner-card__title">DriveX Rijopleidingen</p>
+                        <p class="partner-card__meta"><i class="fa-solid fa-location-dot"></i>Nederland &nbsp;·&nbsp;
+                            Opleiding</p>
+                    </div>
+                </div>
+                <!-- Word partner CTA row -->
+                <div class="partner-card partner-card--cta">
+                    <div class="partner-card__icon accent-neutral">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="partner-card__content">
+                        <p class="partner-card__title">Uw organisatie hier?</p>
+                        <p class="partner-card__meta">Word ook partner van WowTheorie
+                        </p>
+                    </div>
+                    <a href="contact" class="btn btn-orange partner-card__action"><i class="fa-solid fa-envelope"></i>
+                        Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── REFERENTIES ── -->
+    <section class="section section--white">
+        <div class="container">
+            <span class="eyebrow">Ervaringen</span>
+            <h2 class="section-title">Wat zeggen onze partners?</h2>
+            <p class="section-lead">Lees hoe rijscholen en organisaties de samenwerking met WowTheorie ervaren.</p>
+
+            <div class="quotes-grid">
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="quote-card__stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote-card__text">"Dankzij WowTheorie kunnen wij onze leerlingen sneller door het
+                        theorieproces loodsen. Het slagingspercentage is significant gestegen en de communicatie
+                        verloopt vlekkeloos."</p>
+                    <div class="quote-card__author">
+                        <div class="quote-card__avatar">TA</div>
+                        <div>
+                            <p class="quote-card__name">Theoriecentrum Amersfoort</p>
+                            <p class="quote-card__org">Theoriecentrum - Amersfoort</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quote-card__stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote-card__text">"Wij sturen al onze cursisten naar WowTheorie voor de theorie. De
+                        eendaagse methode werkt uitstekend - leerlingen komen goed voorbereid bij ons terug voor de
+                        praktijk."</p>
+                    <div class="quote-card__author">
+                        <div class="quote-card__avatar">LC</div>
+                        <div>
+                            <p class="quote-card__name">Lescar</p>
+                            <p class="quote-card__org">Rijschool - Nederland</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quote-card__stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote-card__text">"De vaste accountmanager, snelle planning en gecentraliseerde facturatie
+                        besparen ons enorm veel tijd. We zouden nooit meer anders willen."</p>
+                    <div class="quote-card__author">
+                        <div class="quote-card__avatar">RP</div>
+                        <div>
+                            <p class="quote-card__name">Rijschool Paraat</p>
+                            <p class="quote-card__org">Rijschool - Nederland</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-block">
+        <div class="container cta-block__inner">
+            <span class="eyebrow eyebrow--light">Start vandaag</span>
+            <h2 class="cta-block__title">Klaar om partner te worden?</h2>
+            <p class="cta-block__sub">Neem contact op via onze contactpagina. Wij reageren binnen één werkdag met een
+                vrijblijvend voorstel op maat.</p>
+            <div class="cta-block__btns">
+                <a href="contact" class="btn btn-orange btn-lg"><i class="fa-solid fa-envelope"></i> Offerte
+                    aanvragen</a>
+                <a href="tel:0850000000" class="btn btn-outline-white btn-lg"><i class="fa-solid fa-phone"></i> 085 000
+                    00 00</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+        <footer class="footer" id="footer">
+        <div class="container footer__inner">
+            <!-- Column 1: Logo & Description -->
+            <div class="footer__col footer__col--brand">
+                <a href="index" class="footer__logo">
+                    <img src="img/logo.png" alt="WowTheorie.nl" class="logo__img">
+                </a>
+                <p class="footer__description">
+                    Haal je theorie-examen in één dag. Slim leren, persoonlijke begeleiding en een hoog
+                    slagingspercentage. Al meer dan 10.000 cursisten geslaagd.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer__col">
+                <h4 class="footer__heading">Snelle Links</h4>
+                <ul class="footer__links">
+                    <li><a href="index">Home</a></li>
+                    <li><a href="over-ons">Over Ons</a></li>
+                    <li><a href="theorie-examens">Theorie-examens</a></li>
+                    <li><a href="diensten">Diensten</a></li>
+                    <li><a href="b2b">B2B</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Examentypes -->
+            <div class="footer__col">
+                <h4 class="footer__heading">Examentypes</h4>
+                <ul class="footer__links">
+                    <li><a href="auto-theorie">Auto Theorie</a></li>
+                    <li><a href="motor-theorie">Motor Theorie</a></li>
+                    <li><a href="scooter-theorie">Scooter Theorie</a></li>
+                    <li><a href="vrachtwagen-theorie">Vrachtwagen Theorie</a></li>
+                    <li><a href="bus-theorie">Bus Theorie</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer__col">
+                <h4 class="footer__heading">Contact</h4>
+                <ul class="footer__links footer__contact">
+                    <li><i class="fa-solid fa-envelope"></i> info@(BEDRIJF).nl</li>
+                    <li><i class="fa-solid fa-phone"></i> 085 000 00 00</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Straatnaam 00, 1234 AB Stad</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>&copy; 2026 WowTheorie.nl - Alle rechten voorbehouden.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacybeleid</a>
+                    <a href="#">Algemene Voorwaarden</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Terug naar boven">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/modal.js"></script>
+</body>
+
+</html>
