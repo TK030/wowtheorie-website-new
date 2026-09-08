@@ -87,7 +87,7 @@ $adres   = implode(', ', array_filter([
 ]));
 $timestamp = date('d-m-Y H:i:s');
 
-$subject = '🎓 Nieuwe aanmelding: ' . safe($data['cursus']) . ' — ' . $naam;
+$subject = '🎓 Nieuwe aanmelding: ' . safe($data['cursus']) . ' - ' . $naam;
 
 $bodyHtml = '<!DOCTYPE html>
 <html lang="nl">
@@ -148,7 +148,7 @@ $bodyHtml = '<!DOCTYPE html>
     </div>
 
   </div>
-  <div class="footer">WOW Theorie — Aanmeldformulier • Gegenereerd op ' . $timestamp . '</div>
+  <div class="footer">WOW Theorie - Aanmeldformulier • Gegenereerd op ' . $timestamp . '</div>
 </div>
 </body>
 </html>';

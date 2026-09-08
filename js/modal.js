@@ -107,7 +107,7 @@
 
         return '<div class="wow-modal__step" id="wowStep4">' +
                '<div class="wow-modal__step-title">Extra opties</div>' +
-               '<div class="wow-modal__step-subtitle">Optioneel — selecteer wat op jou van toepassing is. Je kunt ook gewoon doorgaan.</div>' +
+            '<div class="wow-modal__step-subtitle">Optioneel - selecteer wat op jou van toepassing is. Je kunt ook gewoon doorgaan.</div>' +
                '<div class="wow-modal__extras">' + opts + '</div>' +
                '<p class="wow-modal__extras-note"><i class="fa-solid fa-circle-info"></i> ' +
                'Deze opties zijn niet verplicht. Laat ze ongeselecteerd als ze niet van toepassing zijn.</p>' +
@@ -486,7 +486,7 @@
             var status = document.getElementById('postcodeStatus');
             if (status) status.textContent = '⏳ Adres zoeken...';
 
-            // PDOK Locatieserver — gratis NL overheids-API, geen sleutel nodig
+            // PDOK Locatieserver - gratis NL overheids-API, geen sleutel nodig
             fetch('https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=' +
                   encodeURIComponent(pc + ' ' + nr) + '&fq=type:adres&fl=straatnaam,woonplaatsnaam&rows=1')
             .then(function(r){ return r.json(); })
@@ -508,7 +508,7 @@
                     }
                     if (status) status.textContent = '✓ Adres gevonden';
                 } else {
-                    if (status) status.textContent = '⚠ Adres niet gevonden — vul straat en stad zelf in';
+                    if (status) status.textContent = '⚠ Adres niet gevonden - vul straat en stad zelf in';
                 }
             })
             .catch(function(){
