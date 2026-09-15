@@ -3885,6 +3885,7 @@ a.exam-card__item {
     ============================================ */
 .feature-split {
     padding: var(--section-padding);
+    overflow: hidden;
 }
 
 .feature-split--alt {
