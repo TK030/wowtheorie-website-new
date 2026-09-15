@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -78,7 +79,7 @@
                     <li><a href="index" class="nav__link nav__link--active">Home</a></li>
                     <li><a href="over-ons" class="nav__link">Over Ons</a></li>
                     <li class="nav__dropdown">
-                        <a href="theorie-examens" class="nav__link">Theorie-examens <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="theorie-examens" class="nav__link">Theorie examens <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="nav__dropdown-menu">
                             <li><a href="auto-theorie"><i class="fa-solid fa-car"></i> Auto Theorie</a></li>
                             <li><a href="motor-theorie"><i class="fa-solid fa-motorcycle"></i> Motor Theorie</a></li>
@@ -109,7 +110,8 @@
                                 <span>NL</span></a></li>
                     </ul>
                 </div>
-                <a href="contact.html" class="btn btn--orange header__cta">Contact Us</a>
+                <a href="#" class="btn btn--orange header__cta js-aanmeld-btn"><i class="fa-solid fa-graduation-cap"
+                        aria-hidden="true"></i>Aanmelden</a>
             </div>
 
             <button class="hamburger" id="hamburger" aria-label="Menu openen">
@@ -124,7 +126,7 @@
                 <li><a href="index" class="mobile-menu__link mobile-menu__link--active">Home</a></li>
                 <li><a href="over-ons" class="mobile-menu__link">Over Ons</a></li>
                 <li class="mobile-menu__dropdown">
-                    <button class="mobile-menu__dropdown-toggle" aria-expanded="false">Theorie-examens <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="mobile-menu__dropdown-toggle" aria-expanded="false">Theorie examens <i class="fa-solid fa-chevron-down"></i></button>
                     <ul class="mobile-menu__dropdown-list">
                         <li><a href="auto-theorie" class="mobile-menu__link"><i class="fa-solid fa-car"></i> Auto Theorie</a></li>
                         <li><a href="motor-theorie" class="mobile-menu__link"><i class="fa-solid fa-motorcycle"></i> Motor Theorie</a></li>
@@ -136,7 +138,8 @@
                 <li><a href="diensten" class="mobile-menu__link">Diensten</a></li>
                 <li><a href="b2b" class="mobile-menu__link">B2B</a></li>
                 <li><a href="contact" class="mobile-menu__link">Contact</a></li>
-                <li><a href="contact" class="btn btn--orange mobile-menu__cta">Neem Contact Op</a></li>
+                <li><a href="#" class="btn btn--orange mobile-menu__cta js-aanmeld-btn"><i class="fa-solid fa-graduation-cap"
+                            aria-hidden="true"></i>Aanmelden</a></li>
             </ul>
         </div>
     </header>
@@ -161,7 +164,7 @@
                     eindeloos stampen - en met succes.
                 </p>
                 <div class="hero__buttons">
-                    <a href="contact" class="btn btn--orange btn--lg">Meld je aan</a>
+                    <a href="#" class="btn btn--orange btn--lg js-aanmeld-btn">Meld je aan</a>
                     <a href="diensten" class="btn btn--outline btn--lg">Bekijk de cursussen</a>
                 </div>
 
@@ -456,7 +459,7 @@
                 autotheorie in één dag onder de knie - inclusief het officiële examen.
             </p>
             <div class="cta__buttons">
-                <a href="contact" class="btn btn--white btn--lg">Meld je nu aan</a>
+                <a href="#" class="btn btn--white btn--lg js-aanmeld-btn">Meld je nu aan</a>
                 <a href="auto-theorie" class="btn btn--outline-white btn--lg">Meer over autotheorie</a>
             </div>
         </div>
@@ -554,7 +557,7 @@
                 </div>
             </div>
             <div class="signup-section__cta">
-                <a href="contact" class="btn btn--orange btn--lg">Meld je nu aan</a>
+                <a href="#" class="btn btn--orange btn--lg js-aanmeld-btn">Meld je nu aan</a>
             </div>
         </div>
     </section>
@@ -811,7 +814,7 @@
                 met je theorie op zak.
             </p>
             <div class="cta__buttons">
-                <a href="contact" class="btn btn--white btn--lg">Meld je aan</a>
+                <a href="#" class="btn btn--white btn--lg js-aanmeld-btn">Meld je aan</a>
                 <a href="theorie-examens" class="btn btn--outline-white btn--lg">Bekijk alle cursussen</a>
             </div>
         </div>
@@ -839,7 +842,7 @@
                 <ul class="footer__links">
                     <li><a href="index">Home</a></li>
                     <li><a href="over-ons">Over Ons</a></li>
-                    <li><a href="theorie-examens">Theorie-examens</a></li>
+                    <li><a href="theorie-examens">Theorie examens</a></li>
                     <li><a href="diensten">Diensten</a></li>
                     <li><a href="b2b">B2B</a></li>
                     <li><a href="contact">Contact</a></li>
@@ -883,6 +886,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
+        <script src="js/modal.js"></script>
 </body>
 
 </html>
